@@ -1,0 +1,197 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Barangay Health & School Survey System</title>
+    <link rel="stylesheet" href="body.css">
+
+</head>
+<body class="survey-body">
+    <div class="header dual-theme">
+        <div class="header-badges">
+            <span class="badge health-badge">🏥 Barangay Health</span>
+            <span class="badge school-badge">📚 School Feedback</span>
+        </div>
+        <h1>Integrated Community Survey System</h1>
+        <p>Help us improve both community health services and classroom learning. Your responses support better healthcare access and quality education in our barangay.</p>
+    </div>
+
+    <form method="POST" action="https://script.google.com/macros/s/AKfycbzsLXjlwDH0sRyyO46u5wNaUtkx0ocstoOCsjnSoAkvUE6lSOnWceyO5wVsm87ludOTlA/exec" id="mainForm">
+
+        <!--START OF SCHOOL SECTION PART-->
+        <div class="montecino">
+        <div class="form-section school-section">
+            <div class="section-header">
+                <div class="section-icon">📚</div>
+                <h2>School Feedback Section</h2>
+                <div class="section-tagline">"Your voice shapes better learning"</div>
+            </div>
+            
+            <div class="form-row">
+                <div class="form-group half">
+                    <label for="firstName">📝 First Name</label>
+                    <input type="text" id="firstName" name="firstName" placeholder="Enter your first name" required>
+                </div>
+                
+                <div class="form-group half">
+                    <label for="lastName">📝 Last Name</label>
+                    <input type="text" id="lastName" name="lastName" placeholder="Enter your last name"required>
+                </div>
+            </div>
+            
+            <div class="form-row">
+                <div class="form-group half">
+                    <label for="age">🎂 Age</label>
+                    <input type="number" id="age" name="age" min="1" max="120" placeholder="Your age" step="1" onkeydown="return event.keyCode !== 69 && event.keyCode !== 190" required>
+                </div>
+                
+                <div class="form-group half">
+                    <label>⚥ Gender</label>
+                    <div class="radio-group">
+                        <label class="radio-label"><input type="radio" name="gender" value="Male"> Male</label>
+                        <label class="radio-label"><input type="radio" name="gender" value="Female"> Female</label>
+                        <label class="radio-label"><input type="radio" name="gender" value="Others"> Others</label>
+                    </div>
+                </div>
+            </div>
+                
+            <div class="form-group">
+                <label for="address">🏠 Address / Purok</label>
+                <small class="hint">Helps barangay officials identify which areas need more health services.</small>
+                <select id="address" name="address">
+                    <option value="">Select your purok</option>
+                    <option value="Purok 1">Purok 1</option>
+                    <option value="Purok 2">Purok 2</option>
+                    <option value="Purok 3">Purok 3</option>
+                    <option value="Purok 4">Purok 4</option>
+                    <option value="Purok 5">Purok 5</option>
+                    <option value="Purok 6">Purok 6</option>
+                    <option value="Purok 7">Purok 7</option>
+                    <option value="Purok 8">Purok 8</option>
+                </select>
+            </div>
+            <br>
+            <div class="form-row1">
+                <div class="form-group half">
+                    <label for="grade_section">🎓 Grade & Section</label>
+                    <select id="grade_section" name="grade_section" required>
+                        <option value="">Select grade & section</option>
+                        <option value="Grade 7-A">Grade 7 - A</option>
+                        <option value="Grade 7-B">Grade 7 - B</option>
+                        <option value="Grade 7-C">Grade 7 - C</option>
+                        <option value="Grade 8-A">Grade 8 - A</option>
+                        <option value="Grade 8-B">Grade 8 - B</option>
+                        <option value="Grade 8-C">Grade 8 - C</option>
+                    </select>
+                </div>
+                
+                <div class="form-group half">
+                    <label for="subject">📖 Favorite Subject</label>
+                    <select id="subject" name="subject" required>
+                        <option value="English">📖 English</option>
+                        <option value="Math">🧮 Mathematics</option>
+                        <option value="Science">🔬 Science</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label>⭐ Rate Your Teacher (1-5)</label>
+                <small class="hint">Click on the stars to rate</small>
+                <div class="rating-group">
+                    <label class="rating-label"><input type="radio" name="teacher_rating" value="1" required> <span class="star">★</span></label>
+                    <label class="rating-label"><input type="radio" name="teacher_rating" value="2" required> <span class="star">★★</span></label>
+                    <label class="rating-label"><input type="radio" name="teacher_rating" value="3" required> <span class="star">★★★</span></label>
+                    <label class="rating-label"><input type="radio" name="teacher_rating" value="4" required> <span class="star">★★★★</span></label>
+                    <label class="rating-label"><input type="radio" name="teacher_rating" value="5" required> <span class="star">★★★★★</span></label>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="favorite_lesson">✨ Favorite Lesson / Topic</label>
+                <input type="text" id="favorite_lesson" name="favorite_lesson" placeholder="What lesson did you enjoy the most?" required>
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="suggestions">💡 Suggestions for Improvement</label>
+                <textarea id="suggestions" name="suggestions" rows="3" placeholder="Share your ideas to make learning better..."></textarea>
+            </div>
+        </div>
+        </div>
+        <!--END OF SCHOOL PART-->
+
+        <!--START OF BRGY PART-->
+        <div class="form-section health-section">
+            <div class="section-header">
+                <div class="section-icon">🏥</div>
+                <h2>Health Information Section</h2>
+                <div class="section-tagline">"Your health matters to our community"</div>
+            </div>
+            
+            <div class="form-group">
+                <label for="vaccination_status">💉 Vaccination Status</label>
+                <small class="hint">Used to monitor barangay immunity and identify unvaccinated individuals for health programs.</small>
+                <div class="custom-dropdown">
+                    <select id="vaccination_status" name="vaccination_status" required>
+                        <option value="VACCINATED">✅ FULLY VACCINATED</option>
+                        <option value="PARTIALLY">⚠️ PARTIALLY VACCINATED</option>
+                        <option value="UNVACCINATED">❌ UNVACCINATED</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label>🤒 Recent Symptoms (Select all that apply)</label>
+                <small class="hint">Helps detect possible illness trends or outbreaks in the barangay.</small>
+                <div class="checkbox-group symptoms-group">
+                    <label class="checkbox-label"><input type="checkbox" name="symptom_fever" value="Fever"> 🌡️ Fever</label>
+                    <label class="checkbox-label"><input type="checkbox" name="symptom_cough" value="Cough"> 🤧 Cough</label>
+                    <label class="checkbox-label"><input type="checkbox" name="symptom_fatigue" value="Fatigue"> 😴 Fatigue</label>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="last_medical_checkup">📅 Last Medical Checkup</label>
+                <small class="hint">Used to track how regularly residents access medical services.</small>
+                <input type="date" id="last_medical_checkup" name="last_medical_checkup" required>
+            </div>
+            
+            
+            <div class="form-group">
+                <label for="additional_health_notes">📝 Additional Health Notes</label>
+                <small class="hint">Allows respondents to report issues not covered in this survey.</small>
+                <textarea id="additional_health_notes" name="additional_health_notes" rows="3" placeholder="Any other health concerns or comments..."></textarea>
+            </div>
+        </div>
+        <!--END OF BRGY PART-->
+        
+        <!--SUBMIT SECTION -->
+        <div class="form-section submit-section">
+            <div class="checkbox-group">
+                <label class="checkbox-label">
+                    <input type="checkbox" name="anonymous" value="Yes"> 🙈 Anonymous Submission - I don't want my name shown in reports
+                
+                </label>
+
+            <div class="simple-consent">
+                <label class="checkbox-label">
+                    <input type="checkbox" id="consentCheckbox" required>
+                    <span>By checking this box, you agree to our <a href="https://www.privacy.gov.ph/data-privacy-act/" target="_blank">Data Privacy Terms</a>.</span>
+                </label>
+            </div>
+            </div>
+            <div class="button-group">
+                <button type="submit" class="submit-btn">📋 Submit Survey Response</button>
+                <button type="reset" class="reset-btn">🗑️ Clear All Fields</button>                
+            </div>
+            <br>
+
+            <a href="/TABLES/table.html">TABLE</a>
+        
+    </form>
+</body>
+</html>
+

@@ -1,0 +1,230 @@
+/* Simple Header for table.html */
+.table-page-header {
+    max-width: 850px;
+    width: 100%;
+    margin: 0 auto 30px auto;
+    text-align: center;
+    padding: 20px 25px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.table-page-header h1 {
+    font-size: 28px;
+    color: #1e293b;
+    margin-bottom: 8px;
+}
+
+.table-page-header p {
+    color: #64748b;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.back-link {
+    display: inline-block;
+    background: #f1f5f9;
+    color: #3b82f6;
+    text-decoration: none;
+    padding: 8px 20px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.back-link:hover {
+    background: #e2e8f0;
+    transform: translateX(-3px);
+}
+
+/* ===== DATA PREVIEW TABLES ===== */
+.tables-container {
+    max-width: 850px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.data-table-wrapper {
+    background: white;
+    width: 100%;
+    margin: 0 auto 25px auto;
+    padding: 25px 30px;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.data-table-wrapper:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* Personal Table Theme */
+.personal-table {
+    background: linear-gradient(135deg, #fef3c7 0%, #ffffff 100%);
+    border-left: 6px solid #f59e0b;
+}
+
+/* School Table Theme */
+.school-table {
+    background: linear-gradient(135deg, #dbeafe 0%, #ffffff 100%);
+    border-left: 6px solid #3b82f6;
+}
+
+/* Health Table Theme */
+.health-table {
+    background: linear-gradient(135deg, #d1fae5 0%, #ffffff 100%);
+    border-left: 6px solid #10b981;
+}
+
+/* Table Header */
+.table-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #e2e8f0;
+    flex-wrap: wrap;
+}
+
+.table-icon {
+    font-size: 28px;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 6px 10px;
+    border-radius: 12px;
+}
+
+.table-header h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0;
+    color: #1e293b;
+}
+
+.table-tagline {
+    font-size: 11px;
+    color: #94a3b8;
+    font-style: italic;
+    margin-left: auto;
+}
+
+/* Personal Table Header Color */
+.personal-table .table-header h3 {
+    color: #b45309;
+}
+
+/* School Table Header Color */
+.school-table .table-header h3 {
+    color: #1e40af;
+}
+
+/* Health Table Header Color */
+.health-table .table-header h3 {
+    color: #059669;
+}
+
+/* Table Responsive Wrapper */
+.table-responsive {
+    overflow-x: auto;
+}
+
+/* Table Styling */
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+.data-table th {
+    background: #f1f5f9;
+    padding: 12px 10px;
+    text-align: left;
+    font-weight: 600;
+    color: #334155;
+    border-bottom: 2px solid #e2e8f0;
+}
+
+.data-table td {
+    padding: 12px 10px;
+    border-bottom: 1px solid #e2e8f0;
+    color: #475569;
+}
+
+/* Table Row Hover Effects */
+.data-table tbody tr {
+    transition: all 0.2s ease;
+    cursor: default;
+}
+
+.data-table tbody tr:hover {
+    background-color: #f8fafc;
+    transform: scale(1.01);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Specific hover colors for each table */
+.personal-table .data-table tbody tr:hover {
+    background: linear-gradient(90deg, #fef3c7 0%, #fffbeb 100%);
+}
+
+.school-table .data-table tbody tr:hover {
+    background: linear-gradient(90deg, #dbeafe 0%, #eff6ff 100%);
+}
+
+.health-table .data-table tbody tr:hover {
+    background: linear-gradient(90deg, #d1fae5 0%, #ecfdf5 100%);
+}
+
+/* Table Note */
+.table-note {
+    margin-top: 15px;
+    font-size: 12px;
+    color: #94a3b8;
+    text-align: center;
+    font-style: italic;
+    padding-top: 10px;
+    border-top: 1px dashed #e2e8f0;
+}
+
+/* Responsive Tables */
+@media (max-width: 700px) {
+    .data-table-wrapper {
+        padding: 20px;
+    }
+    
+    .table-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .table-tagline {
+        margin-left: 0;
+    }
+    
+    .data-table th,
+    .data-table td {
+        padding: 8px 6px;
+        font-size: 12px;
+    }
+}
+
+/* Print Styles for Tables */
+@media print {
+    .tables-container {
+        margin-top: 30px;
+    }
+    
+    .data-table-wrapper {
+        break-inside: avoid;
+        box-shadow: none;
+        border: 1px solid #ddd;
+    }
+    
+    .table-note {
+        display: none;
+    }
+}
+
